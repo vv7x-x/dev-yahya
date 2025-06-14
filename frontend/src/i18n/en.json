@@ -1,0 +1,20 @@
+{
+  "home_title": "Yahya Reda | يحيى رضا",
+  "home_sub": "Cinematic, crazy, interactive UI!",
+  "about_title": "Who am I?",
+  "about_desc": "Yahya Reda, a developer and designer, passionate about building crazy and modern interfaces that blend art and technology. I use the latest tech and love coding challenges.",
+  "projects_title": "My Projects / أعمالي",
+  "contact_title": "Contact Me",
+  "contact_name": "Your Name / اسمك",
+  "contact_email": "Email / بريدك الإلكتروني",
+  "contact_message": "Your Message / رسالتك",
+  "contact_send": "Send / إرسال",
+  "ai_title": "AI Assistant",
+  "ai_desc": "An interactive bot that shows Yahya Reda's projects based on your interests (coming soon).",
+  "cv_title": "Download CV",
+  "cv_download": "Download CV PDF",
+  "github_title": "My Open Source Projects",
+  "github_desc": "Projects will be fetched automatically from GitHub soon.",
+  "admin_title": "Admin Dashboard",
+  "admin_desc": "Edit site content (coming soon)."
+}
