@@ -8,6 +8,7 @@ import AI from './AI';
 import CV from './CV';
 import GithubOpenSource from './GithubOpenSource';
 import AdminDashboard from './AdminDashboard';
+import NotFound from './NotFound';
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -21,6 +22,7 @@ const AppRouter = () => (
         <Route path="/cv" element={<CV />} />
         <Route path="/github" element={<GithubOpenSource />} />
         <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
   </BrowserRouter>
