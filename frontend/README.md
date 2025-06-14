@@ -1,3 +1,27 @@
+# مشروع واجهة أمامية حديثة (React + Vite)
+
+## التشغيل
+
+1. تثبيت الحزم:
+   ```bash
+   npm install
+   ```
+2. تشغيل الموقع:
+   ```bash
+   npm run dev
+   ```
+
+## المزايا المضافة
+- صفحة 404 مخصصة
+- زر العودة للأعلى
+- إشعارات ترحيبية
+- دعم التبديل بين اللغات والثيمات
+
+## تطوير المشروع
+يمكنك تعديل المكونات في مجلد `src/components` أو الصفحات في `src/routes`.
+
+---
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
