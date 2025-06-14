@@ -4,6 +4,7 @@ import AppRouter from './routes/AppRouter';
 import LanguageSwitcher from './components/LanguageSwitcher';
 import ParallaxBG from './components/ParallaxBG';
 import ThemeSwitcher from './components/ThemeSwitcher';
+import BackToTop from './components/BackToTop';
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <ThemeSwitcher />
       {!bootDone && <BootAnimation onFinish={() => setBootDone(true)} />}
       {bootDone && <AppRouter />}
+      <BackToTop />
     </>
   );
 }
