@@ -1,0 +1,45 @@
+.neon-glow {
+  text-shadow: 0 0 8px #39ff14, 0 0 16px #39ff14, 0 0 32px #39ff14;
+}
+.glitch {
+  position: relative;
+}
+.glitch-layer {
+  position: relative;
+  color: #39ff14;
+}
+.glitch-layer::before, .glitch-layer::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%;
+  overflow: hidden;
+  color: #b026ff;
+  z-index: 2;
+  opacity: 0.7;
+  animation: glitch 1s infinite linear alternate-reverse;
+}
+.glitch-layer::after {
+  color: #fff;
+  left: 2px;
+  text-shadow: -2px 0 #b026ff;
+  animation-delay: .2s;
+}
+@keyframes glitch {
+  0% { clip-path: inset(0 0 80% 0); }
+  20% { clip-path: inset(0 0 60% 0); }
+  40% { clip-path: inset(0 0 40% 0); }
+  60% { clip-path: inset(0 0 20% 0); }
+  80% { clip-path: inset(0 0 10% 0); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+.animate-fade-in {
+  animation: fadeInUp 1s cubic-bezier(.39,.575,.56,1.000) both;
+}
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.bg-matrix-dark { background: #0a0f0d; }
+.text-matrix-green { color: #39ff14; }
+.border-matrix-green { border-color: #39ff14; }
