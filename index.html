@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>يحيى رضا - مطور مواقع وبوتات</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <!-- VS Code Title Bar -->
+    <div class="titlebar">
+        <div class="titlebar-content">
+            <div class="traffic-lights">
+                <div class="traffic-light close"></div>
+                <div class="traffic-light minimize"></div>
+                <div class="traffic-light maximize"></div>
+            </div>
+            <div class="title">يحيى رضا - Developer Portfolio</div>
+            <div class="titlebar-actions">
+                <i class="fas fa-minus"></i>
+                <i class="fas fa-square"></i>
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main VS Code Layout -->
+    <div class="vscode-container">
+        <!-- Activity Bar -->
+        <div class="activity-bar">
+            <div class="activity-icon active" data-panel="explorer">
+                <i class="fas fa-folder-tree"></i>
+            </div>
+            <div class="activity-icon" data-panel="search">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="activity-icon" data-panel="git">
+                <i class="fas fa-code-branch"></i>
+            </div>
+            <div class="activity-icon" data-panel="extensions">
+                <i class="fas fa-th-large"></i>
+            </div>
+            <div class="activity-icon bottom" data-panel="settings">
+                <i class="fas fa-cog"></i>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>مستكشف المشاريع</h3>
+                <div class="sidebar-actions">
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-refresh"></i>
+                </div>
+            </div>
+            <div class="file-explorer">
+                <div class="folder">
+                    <div class="folder-item">
+                        <i class="fas fa-folder-open"></i>
+                        <span>portfolio</span>
+                    </div>
+                    <div class="folder-content">
+                        <div class="file-item active" data-file="about">
+                            <i class="fab fa-js-square"></i>
+                            <span>about.js</span>
+                        </div>
+                        <div class="file-item" data-file="projects">
+                            <i class="fab fa-react"></i>
+                            <span>projects.jsx</span>
+                        </div>
+                        <div class="file-item" data-file="skills">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>skills.css</span>
+                        </div>
+                        <div class="file-item" data-file="contact">
+                            <i class="fab fa-html5"></i>
+                            <span>contact.html</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Tabs -->
+            <div class="tabs-container">
+                <div class="tab active" data-file="about">
+                    <span>about.js</span>
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="tab" data-file="projects">
+                    <span>projects.jsx</span>
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="tab" data-file="skills">
+                    <span>skills.css</span>
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="tab" data-file="contact">
+                    <span>contact.html</span>
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <!-- Editor Content -->
+            <div class="editor-container">
+                <!-- About File Content -->
+                <div class="file-content active" id="about-content">
+                    <div class="line-numbers">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                        <div>10</div>
+                        <div>11</div>
+                        <div>12</div>
+                        <div>13</div>
+                        <div>14</div>
+                        <div>15</div>
+                        <div>16</div>
+                        <div>17</div>
+                        <div>18</div>
+                        <div>19</div>
+                        <div>20</div>
+                    </div>
+                    <div class="code-content">
+                        <div class="hero-section">
+                            <div class="hero-3d">
+                                <canvas id="three-canvas"></canvas>
+                            </div>
+                            <div class="hero-text">
+                                <div class="typing-animation">
+                                    <span class="keyword">const</span> <span class="variable">developer</span> <span class="operator">=</span> <span class="brace">{</span>
+                                </div>
+                                <div class="typing-animation delay-1">
+                                    &nbsp;&nbsp;<span class="property">name</span><span class="colon">:</span> <span class="string">"يحيى رضا"</span><span class="comma">,</span>
+                                </div>
+                                <div class="typing-animation delay-2">
+                                    &nbsp;&nbsp;<span class="property">title</span><span class="colon">:</span> <span class="string">"Full Stack Developer"</span><span class="comma">,</span>
+                                </div>
+                                <div class="typing-animation delay-3">
+                                    &nbsp;&nbsp;<span class="property">specialization</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"مواقع ويب"</span><span class="comma">,</span> <span class="string">"بوتات"</span><span class="bracket">]</span><span class="comma">,</span>
+                                </div>
+                                <div class="typing-animation delay-4">
+                                    &nbsp;&nbsp;<span class="property">experience</span><span class="colon">:</span> <span class="string">"5+ years"</span><span class="comma">,</span>
+                                </div>
+                                <div class="typing-animation delay-5">
+                                    &nbsp;&nbsp;<span class="property">passion</span><span class="colon">:</span> <span class="string">"تطوير حلول مبتكرة"</span>
+                                </div>
+                                <div class="typing-animation delay-6">
+                                    <span class="brace">}</span><span class="semicolon">;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects File Content -->
+                <div class="file-content" id="projects-content">
+                    <div class="line-numbers">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                        <div>10</div>
+                    </div>
+                    <div class="code-content">
+                        <div class="projects-section">
+                            <div class="project-card floating">
+                                <div class="project-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <h3>مواقع الويب</h3>
+                                <p>تطوير مواقع ويب متجاوبة وسريعة باستخدام أحدث التقنيات</p>
+                                <div class="tech-stack">
+                                    <span>React</span>
+                                    <span>Node.js</span>
+                                    <span>MongoDB</span>
+                                </div>
+                            </div>
+                            <div class="project-card floating">
+                                <div class="project-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <h3>البوتات الذكية</h3>
+                                <p>بوتات تلجرام وديسكورد متقدمة بذكاء اصطناعي</p>
+                                <div class="tech-stack">
+                                    <span>Python</span>
+                                    <span>Telegram API</span>
+                                    <span>AI/ML</span>
+                                </div>
+                            </div>
+                            <div class="project-card floating">
+                                <div class="project-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <h3>تطبيقات الجوال</h3>
+                                <p>تطبيقات جوال أصلية ومتجاوبة لأنظمة iOS و Android</p>
+                                <div class="tech-stack">
+                                    <span>React Native</span>
+                                    <span>Flutter</span>
+                                    <span>Firebase</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills File Content -->
+                <div class="file-content" id="skills-content">
+                    <div class="line-numbers">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div>8</div>
+                    </div>
+                    <div class="code-content">
+                        <div class="skills-section">
+                            <div class="skill-category">
+                                <h3>Frontend</h3>
+                                <div class="skill-item">
+                                    <span>JavaScript</span>
+                                    <div class="skill-bar"><div class="skill-progress" data-width="95%"></div></div>
+                                </div>
+                                <div class="skill-item">
+                                    <span>React</span>
+                                    <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+                                </div>
+                                <div class="skill-item">
+                                    <span>CSS/SCSS</span>
+                                    <div class="skill-bar"><div class="skill-progress" data-width="92%"></div></div>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h3>Backend</h3>
+                                <div class="skill-item">
+                                    <span>Node.js</span>
+                                    <div class="skill-bar"><div class="skill-progress" data-width="88%"></div></div>
+                                </div>
+                                <div class="skill-item">
+                                    <span>Python</span>
+                                    <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+                                </div>
+                                <div class="skill-item">
+                                    <span>MongoDB</span>
+                                    <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact File Content -->
+                <div class="file-content" id="contact-content">
+                    <div class="line-numbers">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                    </div>
+                    <div class="code-content">
+                        <div class="contact-section">
+                            <h2>تواصل معي</h2>
+                            <div class="contact-methods">
+                                <a href="mailto:yahya@example.com" class="contact-card">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>yahya@example.com</span>
+                                </a>
+                                <a href="tel:+1234567890" class="contact-card">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+123 456 7890</span>
+                                </a>
+                                <a href="#" class="contact-card">
+                                    <i class="fab fa-telegram"></i>
+                                    <span>@YahyaReda</span>
+                                </a>
+                                <a href="#" class="contact-card">
+                                    <i class="fab fa-github"></i>
+                                    <span>github.com/yahyareda</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+        <div class="status-left">
+            <span>JavaScript</span>
+            <span>UTF-8</span>
+            <span>CRLF</span>
+        </div>
+        <div class="status-right">
+            <span>Ln 1, Col 1</span>
+            <span>يحيى رضا - مطور محترف</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
